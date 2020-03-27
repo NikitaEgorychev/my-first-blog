@@ -1,8 +1,7 @@
 <html>
-
     <body>
+    	<p>Spring Now!</p>
 
-        <p>Spring Now!</p>
         
     </body>
 <style type="text/css">
@@ -187,3 +186,41 @@ textEffect('fly-in-out');
 </script>>
 
 </html>
+
+
+<html>
+    <head>
+        <title>Django Girls blog</title>
+    </head>
+    <body>
+        <div>
+    <h1><a href="/">Django Girls Blog</a></h1>
+</div>
+
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
+    </body>
+
+    <style type="text/css">
+	@import url("https://fonts.googleapis.com/css?family=Syncopate");
+
+html, body {
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Syncopate', Helvetica, Arial;
+	text-transform: uppercase;
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	display: table;
+	color: red;
+}
+</style>
+
+</html>
+
+    
