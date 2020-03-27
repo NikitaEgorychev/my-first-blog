@@ -1,0 +1,217 @@
+{% load static %}
+<html>
+    <head>
+        <title>Django Girls blog</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+    <body>
+    <div class="page-header">
+        <h1>Django Girls Blog</h1>
+    </div>
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+            {% block content %}
+            {% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
+<style type="text/css">
+         .page-header {
+         background: url("https://w-dog.ru/wallpapers/14/15/365788202766262/alleya-cvetenie-velosiped.jpg");
+         margin-top: 0;
+         padding: 20px 20px 20px 40px;
+         }
+         
+  
+         .content {
+         margin-left: 40px;
+         }
+         h1, h2, h3, h4 {
+         font-family: 'Lobster', cursive;
+         }
+         .date {
+         color: #828282;
+         }
+         .save {
+         float: right;
+         }
+         .post-form textarea, .post-form input {
+         width: 100%;
+         }
+         .top-menu, .top-menu:hover, .top-menu:visited {
+         color: #ffffff;
+         float: right;
+         font-size: 26pt;
+         margin-right: 20px;
+         }
+         .post {
+         margin-bottom: 70px;
+         }
+         .post h1 a, .post h1 a:visited {
+         color: #000000;
+         }
+         .page-header h1 {
+         display: table-cell;
+         text-align: center;
+         vertical-align: middle;
+         font-size: 3em;
+         line-height: 2em;
+         color: black;
+         }
+
+
+         i {
+         display: inline-block;
+         font-style: normal;
+         padding: 0 0.25em;
+         -webkit-transform: scale(0) translate3d(0, -2000px, 0);
+         -moz-transform: scale(0) translate3d(0, -2000px, 0);
+         -ms-transform: scale(0) translate3d(0, -2000px, 0);
+         -o-transform: scale(0) translate3d(0, -2000px, 0);
+         transform: scale(0) translate3d(0, -2000px, 0);
+         background: rgba(1, 25, 254, 0.3);
+         border-radius: 50%;
+         }
+         i.fly-in-out {
+         -webkit-animation: fly-in-out 3s infinite ease-in-out;
+         -moz-animation: fly-in-out 3s infinite ease-in-out;
+         -o-animation: fly-in-out 3s infinite ease-in-out;
+         animation: fly-in-out 3s infinite ease-in-out;
+         }
+
+         @-webkit-keyframes fly-in-out {
+         0% {
+            -webkit-transform: scale(0) translate3d(0, -1000px, 0);
+            background: rgba(11, 200, 1, 0.3);
+            box-shadow: 0 0 100px 100px rgba(11, 200, 1, 0.2);
+            border-radius: 50%;
+         }
+         15%, 85% {
+            color: rgba(11, 200, 1, 0.8);
+            text-shadow: 0 0 5px rgba(11, 200, 1, 0.5);
+            -webkit-transform: scale(1) translate3d(0, 0, 0);
+            background: transparent;
+            box-shadow: none;
+         }
+         100% {
+            color: transparent;  
+            -webkit-transform: scale(0) translate3d(0, 1000px, 0);
+            background: rgba(11, 200, 1, 0.3);
+            box-shadow: 0 0 100px 100px rgba(11, 200, 1, 0.2);
+            border-radius: 50%;
+         }
+         }
+      @-moz-keyframes fly-in-out {
+         0% {
+            -moz-transform: scale(0) translate3d(0, -2000px, 0);
+            background: rgba(11, 200, 1, 0.3);
+            box-shadow: 0 0 100px 100px rgba(11, 200, 1, 0.2);
+            border-radius: 50%;
+            }
+         15%, 85% {
+            color: rgba(11, 200, 1, 0.8);
+            text-shadow: 0 0 5px rgba(11, 200, 1, 0.5);
+            -moz-transform: scale(1) translate3d(0, 0, 0);
+            background: transparent;
+            box-shadow: none;
+         }
+         100% {
+            color: transparent;  
+            -moz-transform: scale(0) translate3d(0, 2000px, 0);
+            background: rgba(11, 200, 1, 0.3);
+            box-shadow: 0 0 100px 100px rgba(11, 200, 1, 0.2);
+            border-radius: 50%;
+         }
+      }
+      @-o-keyframes fly-in-out {
+         0% {
+         -o-transform: scale(0) translate3d(0, -2000px, 0);
+         background: rgba(11, 200, 1, 0.3);
+         box-shadow: 0 0 100px 100px rgba(11, 200, 1, 0.2);
+         border-radius: 50%;
+         }
+         15%, 85% {
+         color: rgba(11, 200, 1, 0.8);
+         text-shadow: 0 0 5px rgba(11, 200, 1, 0.5);
+         -o-transform: scale(1) translate3d(0, 0, 0);
+         background: transparent;
+         box-shadow: none;
+          }
+   100% {
+      color: transparent;  
+      -o-transform: scale(0) translate3d(0, 2000px, 0);
+      background: rgba(11, 200, 1, 0.3);
+      box-shadow: 0 0 100px 100px rgba(11, 200, 1, 0.2);
+      border-radius: 50%;
+   }
+}
+@keyframes fly-in-out {
+   0% {
+      transform: scale(0) translate3d(0, -2000px, 0);
+      background: rgba(11, 200, 1, 0.3);
+      box-shadow: 0 0 100px 100px rgba(11, 200, 1, 0.2);
+      border-radius: 50%;
+   }
+   15%, 85% {
+      color: rgba(11, 200, 1, 0.8);
+      text-shadow: 0 0 5px rgba(11, 200, 1, 0.5);
+      transform: scale(1) translate3d(0, 0, 0);
+      background: transparent;
+      box-shadow: none;
+   }
+   100% {
+      color: transparent;  
+      transform: scale(0) translate3d(0, 2000px, 0);
+      background: rgba(11, 200, 1, 0.3);
+      box-shadow: 0 0 100px 100px rgba(1, 25, 254, 0.2);
+      border-radius: 50%;
+   }
+}
+         </style>
+
+
+
+
+         <script type="text/javascript">
+   var paragraph = document.getElementsByTagName('h1')[0];
+
+function textEffect(animationName) {
+  var text = paragraph.innerHTML,
+      chars = text.length,
+      newText = '',
+      animation = animationName,
+      char,
+      i;
+
+   for (i = 0; i < chars; i += 1) {
+      newText += '<i>' + text.charAt(i) + '</i>';
+   }
+
+   paragraph.innerHTML = newText;
+
+   var wrappedChars = document.getElementsByTagName('i'),
+      wrappedCharsLen = wrappedChars.length,
+      j = 0;
+
+   function addEffect () {
+      setTimeout(function () {
+         wrappedChars[j].className = animation;
+         j += 1;
+         if (j < wrappedCharsLen) {
+            addEffect();
+         }
+      }, 100)
+   }
+
+   addEffect();
+};
+
+textEffect('fly-in-out');
+
+</script>
+</html>
